@@ -38,4 +38,33 @@ gcc -o main.c : gcc야 내가 main.c.라는 파일 만들었으니깐 목적파�
 */
 
 
+
+
+
+
+#include <stdio.h>
+
+#define principal 5000.00
+#define period 10
+
+int main(){
+	int year;
+	float interest_rate,value,amount;
+	
+	
+	interest_rate = 0.11;
+	amount=principal;
+	year=0;
+	
+	while(year<=period){
+		printf("%2d %8.2f\n",year,amount);
+		value=amount+amount*interest_rate;
+		year++;
+		amount=value;
+	}
+	
+	
+}
+
+
 }
