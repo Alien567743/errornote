@@ -11,4 +11,12 @@ int main(void) {
 printf("%d",number);   //you forgot printf /not print/
 printf("%6.2f",number2);//you forgot ""before % :causes /expected expression before % /
 	return 0;
+
+/*
+개념설명: %d :뒤에 int변수 가져옴 
+        %f :뒤에 float변수 가져옴
+        4.2 :총4글자 , 소숫점2째자리 까지 가져옴
+*/
+
+
 }
