@@ -1,1 +1,14 @@
+#include <stdio.h>
 
+int main(void) {
+	// your code goes here
+	int number;
+	float number2;
+	
+	number = 200;
+	number2 = 20.4+20.42;
+	
+printf("%d",number);   //you forgot printf /not print/
+printf("%6.2f",number2);//you forgot ""before % :causes /expected expression before % /
+	return 0;
+}
