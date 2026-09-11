@@ -13,9 +13,28 @@ printf("%6.2f",number2);//you forgot ""before % :causes /expected expression bef
 	return 0;
 
 /*
-개념설명: %d :뒤에 int변수 가져옴 
-        %f :뒤에 float변수 가져옴
-        4.2 :총4글자 , 소숫점2째자리 까지 가져옴
+개념설명:
+1
+.
+%d :뒤에 int변수 가져옴 
+%f :뒤에 float변수 가져옴
+4.2 :총4글자 , 소숫점2째자리 까지 가져옴
+.
+2
+.
+|n : |newline이란 뜻
+
+int main(void)
+ㄴoutput   ㄴinput
+
+주석 : //  /* */
+.
+3
+.
+gcc -o main.c : gcc야 내가 main.c.라는 파일 만들었으니깐 목적파일 만들어줘(-o:objective file) (gcc는 rinux system의 built-in compiler)
+./main : objective file실행시키는 excutive file 실행됨.
+
+
 */
 
 
