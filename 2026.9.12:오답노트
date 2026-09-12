@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int mul(int a,int b);      //compiler는 코드를 위에서 아래로 한번만 읽기 때문에, main함수 읽기 위해서 main이전에 mul을 간단히 귀뜸해준것
+
+int main() {
+	int a,b,c;
+	a=5,b=6;
+	c=mul(a,b);
+	printf("multiplication of%d and %d is equal as %d",a,b,c);       //첫번쨰 인자 이후로는 다 대입값임.
+	return 0;
+}
+
+int mul(int x,int y){         //이전에 귀뜸해준 함수라도 compiler은 서로 연결 안시킴
+	int z=x*y;
+	return z;
+}
