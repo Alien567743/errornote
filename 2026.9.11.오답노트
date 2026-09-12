@@ -44,20 +44,19 @@ gcc -o main.c : gcc야 내가 main.c.라는 파일 만들었으니깐 목적파�
 
 #include <stdio.h>
 
-#define principal 5000.00
+#define principal 5000.00  //#define은 함수 밖에서 값을 픽스할수 있음.
 #define period 10
 
 int main(){
 	int year;
 	float interest_rate,value,amount;
-	
-	
+
 	interest_rate = 0.11;
 	amount=principal;
 	year=0;
 	
-	while(year<=period){
-		printf("%2d %8.2f\n",year,amount);
+	while(year<=period){ 
+		printf("%2d %8.2f\n",year,amount);  //ouput을 먼저 출력하고 나서 값 최신화를 진행.//while문은 input이 반하기 전까지 무한loop.
 		value=amount+amount*interest_rate;
 		year++;
 		amount=value;
