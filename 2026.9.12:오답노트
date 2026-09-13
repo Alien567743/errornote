@@ -46,3 +46,19 @@ int main(){
     printf("%d",b);
     return 0;
 }
+=======================================================================================
+#include <stdio.h>
+
+int main(){
+    int year,period;
+    float amount,value,inrate;         //머리속으로 변수 관계성을 공간화해야함
+    year=0;
+    scanf("%d %f %f",&period,&amount,&inrate);
+    while(year<period){
+        printf("%2d%8.2f\n",year,amount);     
+        value=amount+amount*inrate;            //amount 가 main, value는 amount 에 대입하기 위한 외부 객체
+        year++;
+        amount=value;
+        
+    }
+}
