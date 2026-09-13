@@ -15,3 +15,23 @@ int mul(int x,int y){         //이전에 귀뜸해준 함수라도 compiler은 
 	int z=x*y;
 	return z;
 }
+
+
+
+===========================================================================================
+#include <stdio.h>
+
+int main() {
+    int number;
+    scanf("%d",&number);  //scanf는 1.이전에 정의한 변수를 가져옴 2. & :를 통해 입력할 변수 특정
+    
+    if(number<100){
+        printf("your number is less then 100");
+    }
+    
+    else{ 
+        printf("your number is bigger then 100");
+    }
+
+    return 0;
+}
