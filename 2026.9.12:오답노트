@@ -47,6 +47,12 @@ int main(){
     return 0;
 }
 =======================================================================================
+<<<<여러 변수들의 공간형성>>>>>
+1.print할 변수 결정
+2.나머지 변수는 print하는 변수를 support
+3.scanf할 변수 결정
+
+
 #include <stdio.h>
 
 int main(){
@@ -56,9 +62,23 @@ int main(){
     scanf("%d %f %f",&period,&amount,&inrate);
     while(year<period){
         printf("%2d%8.2f\n",year,amount);     
-        value=amount+amount*inrate;            //amount 가 main, value는 amount 에 대입하기 위한 외부 객체
+        value=amount+amount*inrate;            //amount 가 main이고, value는 amount 에 대입하기 위한 외부 객체임. amount에 scanf도 하고 printf도 하지만 scanf는 while이전 한번만 이뤄지고,printf이전에 amonut을 갱신함으로써 ㄱㅊ음
         year++;
         amount=value;
         
     }
 }
+======================================================================================
+#include <stdio.h>
+
+
+int main(){
+    int count=0,N;                         //print할거는 year, sum,  그리고 period,number은 support, scanf는 period,numeber
+    float sum=0,number;                     //print변수 처음에 0으로 초기화, while안에 support변수 scanf, print변수가 support 변수관계식으로 초기화, print변수를 print
+    scanf("%d",&N);
+    while(count<N){
+        scanf("%f",&number);
+        sum=sum + number;
+        printf("%f\n",sum);
+        count++;
+    }
