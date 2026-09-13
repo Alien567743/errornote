@@ -91,3 +91,29 @@ ex) auto        extern    signed
 6,operator : 계산자들 + - * /
 
 }
+
+=============================================================================<2진법, 16진법, 8진법> 
+1, binary는 이진법임 
+decimal 이 10진법 0~9,+,-부호 가능
+
+octal : 0~7 , with a leading 0
+
+hexadecimal : 0~9 a~f with a  leading 0x
+
+ex)octal 
+0435= 4x8^2 + 3x8^1 + 5x8^0
+
+hexadecimal
+0x3ff = 3x16^2 + 15x16^1 + 15x16^0
+
+
+#include <stdio.h>
+
+int main(){
+    int a,b;
+    a=0xfff;          //hexadecimal(16진수) : 0x을 앞에 붙여서 표시함, octal(8진수) : 0을 앞에 붙여서 표시함
+    b=15*(16*16)+15*(16)+15;   //<--hexadecimal  culculation
+    printf("%d |n",a);
+    printf("%d",b);
+    return 0;
+}
