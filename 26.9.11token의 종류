@@ -64,6 +64,30 @@ int main(){
 	
 	
 }
+=================================================================================<token의 종류>
 
+token : 단어 덩어리
+1. keywords : like int, float, 전체 32개 있음
+ex) auto        extern    signed
+    break       float      sizeof
+    case        for        static
+    const       goto       struct
+    continue    if         switch
+    char        int 0      typedof
+    default    long        union 
+   do           register x unsigned
+   doubt       return      volatile
+   else        short       while
+   enum
+
+2, identifiers : variable너가 설정한 변수들 (main도 변수이름으로 설정 가능)
+
+3.const : 숫자들 상수들 변하지 않음
+
+4, string : abc 문자
+
+5. special string: 특수문자 {} []
+
+6,operator : 계산자들 + - * /
 
 }
