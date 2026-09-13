@@ -1,0 +1,31 @@
+========================================
+#include<stdio.h>
+
+int main(){
+    int x;        //x는 int type
+    int *ptr_x;   //1.*: ptr_x는 주소를 담는 변수야! 2.int: ptr_x의 안의 값(인 주소값)을 따라가면 그 주소 안의 값이 int야!!
+    ptr_x=&x;     //1.&: x의 주소를 왼쪽 값에 대입해!!  |||||||전제조건 1. ptr_x가 포인터로 이전에 선언되야함 2. x의 type 이 매!치! 되야함 
+//%p : 포인터 값을 가져옴
+
+//       int *ptr_x  : 의 *:너 포인터야!선언할때
+//printf("%p",*ptr_x):의 *:너의 주소를 따라가라, 안의 값 가져와라
+
+
+// *ptr_x = *ptr_x + 200; : 직역: [ptr_x안에 가지는 주소를 따라가서, 주소안의 값]에 200 더해서 
+                                 ptr_x안에 가지는 주소가 가리키는 곳에 가서 집어넣어라
+
+
+    scanf("%d",&x);
+    printf("%d \n%d",*ptr_x,ptr_x);
+    return 0;
+
+}
+
+======================<ASCII code>
+..문자 1개는 1byte잡아먹음
+..int 1개는 4byte 잡아먹음
+sizeof(c)->c변수의 문자가 잡아먹는 byte를 줘라, 1임
+ex)
+char c='a';
+printf("%ld",sizeof(c));  1.char 은 문자열 character type, 
+                          2. %ld :  문자열 전용
